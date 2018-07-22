@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.1'
 
+gem 'actionpack', '~> 5.2'
 gem 'rails', '~> 5.2.0'
 gem 'sqlite3'
 gem 'puma', '~> 3.11'
@@ -14,8 +15,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise', '~> 4.2'
 gem 'haml', '~> 5.0', '>= 5.0.4'
-
-#gem 'simple_form', '~> 3.5'
+gem 'simple_form', github: 'plataformatec/simple_form'
 
 
 group :development, :test do

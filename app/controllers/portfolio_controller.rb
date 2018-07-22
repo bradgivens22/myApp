@@ -3,20 +3,22 @@ class PortfolioController < ApplicationController
 
 
   def index
-  	
+  	@project = Project.all
   end
 
   def show
   end
 
   def new
-   
+   @project = Project.new
   end
 
   def create
+  	@project = Project.new(project_params)
   end
 
   def edit
+
   end
 
   def update

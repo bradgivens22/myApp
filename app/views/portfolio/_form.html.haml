@@ -1,0 +1,5 @@
+= simple_form_for @portfolio do |f|
+  = f.input :title, label: 'Title of your project', error: 'Title is mandatory, please specify one'
+  = f.input :company, label: 'Company name.'
+  = f.input :link, label: 'URL'
+  = f.button :submit

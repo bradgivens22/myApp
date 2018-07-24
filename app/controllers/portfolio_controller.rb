@@ -2,44 +2,33 @@ class PortfolioController < ApplicationController
 
 
 
-  def index
-  	@portfolio = Portfolio.all
-  end
+ IGNORE!!!!
+  IGNORE!!!!
+   IGNORE!!!!
+   v
 
-  def show
-  end
+    IGNORE!!!!v
 
-  def new
-   @portfolio = Portfolio.new
-  end
-=begin
-  def create
-  	@project = Project.new(project_params)
-  	if @project.save
-  		redirect_to @project
-  	else
-  		render 'new'
-  	end
-  end
+    v
+     IGNORE!!!!v
 
-  def edit
+     v
+     v
+      IGNORE!!!!
 
-  end
+       IGNORE!!!!
+        IGNORE!!!!
+         IGNORE!!!!
+          IGNORE!!!!
+           IGNORE!!!!
+            IGNORE!!!! IGNORE!!!!
 
-  def update
-  end
+             IGNORE!!!!
+              IGNORE!!!!
+               IGNORE!!!!
 
-  def destroy
-  end
+                IGNORE!!!!
+                 IGNORE!!!!
+                  IGNORE!!!!
 
-
-  private
-
-  def find_project
-  end
-
-  def project_params
-    params.require(:project).permit(:title, :content)
-  end
-=end
 end

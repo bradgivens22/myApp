@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 get 'welcome/index'
 get 'contact/index'
 
-resources :portfolio   
+resources :projects   
 
 
 root 'welcome#index'

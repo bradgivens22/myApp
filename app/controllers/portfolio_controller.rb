@@ -3,16 +3,16 @@ class PortfolioController < ApplicationController
 
 
   def index
-  	@project = Project.all
+  	@portfolio = Portfolio.all
   end
 
   def show
   end
 
   def new
-   @project = Project.new
+   @portfolio = Portfolio.new
   end
-
+=begin
   def create
   	@project = Project.new(project_params)
   	if @project.save
@@ -41,5 +41,5 @@ class PortfolioController < ApplicationController
   def project_params
     params.require(:project).permit(:title, :content)
   end
-
+=end
 end

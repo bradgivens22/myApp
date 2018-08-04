@@ -1,7 +1,8 @@
 %h1 Show page - listing all projects
 
-%h2= @note.title
-%p= @note.content
+
+%h2= @project.title
+%p= @project.content
 
 = link_to "Home", root_path
 = link_to "Add project", new_project_path

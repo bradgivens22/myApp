@@ -3,6 +3,7 @@ class ProjectsController < ApplicationController
   before_action :find_project, only:[:show, :edit, :update, :destroy]
 
   def index
+    @project = Project.all
   end
 
   def show
@@ -28,9 +29,16 @@ class ProjectsController < ApplicationController
   end
 
   def update
+    if @project.update(project_params)
+      redirect_to @project
+    else
+      render 'edit'
+    end
   end
 
   def destroy
+    @project.destroy
+    redirect_to project_path
   end
 
 

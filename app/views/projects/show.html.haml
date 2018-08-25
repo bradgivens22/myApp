@@ -1,10 +1,13 @@
-%h1 Show page - listing all projects
+%h1 Show page - individual project pages
 
 
 %h2= @project.title
 %p= @project.content
 
-= link_to "Home", root_path
-= link_to "Add project", new_project_path
-= link_to "Edit", edit_project_path(@project)
-= link_to "Delete", project_path(@project), method: :delete, date: { confirm: "Are you sure?"}
+
+
+- if model_id = current_model
+	= link_to "Edit", edit_project_path(@project)
+	= link_to "Delete", project_path(@project), method: :delete, date: { confirm: "Are you sure?"}
+	= link_to "Back", projects_path
+

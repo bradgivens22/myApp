@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
   before_action :find_project, only:[:show, :edit, :update, :destroy]
 
   def index
-    @project = Project.all
+    @project = Project.all.order("created_at DESC")
   end
 
   def show
@@ -25,7 +25,6 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-
   end
 
   def update

@@ -8,19 +8,8 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = csrf_meta_tags
 
+    %p.notice= notice
+    %p.alert= alert 
+
 %body
-    %header
-      .header_inner
-        = link_to image_tag( 'logo.svg'), root_path, id: "logo"
-        %nav
-          - if user_signed_in?
-            = link_to "New Project", new_project_path
-          - else
-            = link_to "Log In", new_model_session_path
-
-      %p.notice= notice
-      %p.alert= alert 
-
-      = yield
-
-  
+    = yield

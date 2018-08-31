@@ -1,6 +1,9 @@
 %h2 Index page - listing all projects
 
 =link_to "Home", root_path
+- if model_signed_in?
+	=link_to "Add project", new_project_path
+-else 
 
 - @project.each do |project|
 	%a{ href: (url_for [project])}

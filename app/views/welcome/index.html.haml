@@ -1,7 +1,13 @@
-%h1 Welcome#index
-%p Find me in app/views/welcome/index.html.haml
+.header
+	%h1 Welcome index
+	.nav
+		.buttons
+			= link_to "Projects", projects_path, class: "button"
+			= link_to "Contact", contact_index_path, class: "button"
+			- if model_signed_in?
+				= link_to "Sign Out", destroy_model_session_path, method: :delete, class: "button"
+			- else
+				= link_to "Admin", new_model_session_path, class: "button"
 
-= link_to "Projects", projects_path
-= link_to "Contact", contact_index_path
-=link_to "Admin", new_model_session_path
+	%p Find me in app/views/welcome/index.html.haml
 

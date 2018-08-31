@@ -1,3 +1,33 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.header {
+	background: #E2E1E0;
+	position: fixed;
+	padding: 10;
+	width: 100%;
+
+	.nav {
+		width: auto;
+		height: auto;
+		float: right;
+
+		.buttons {
+			margin-top: 2; 
+			a.button {
+				background: #959796;
+				padding: .5rem 2rem;
+				border-radius: 2rem;
+				text-decoration: none;
+				color: #60FECB;
+				border: 2px solid none;
+			}
+		}
+
+	}
+
+}
+
+

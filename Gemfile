@@ -16,6 +16,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise', '~> 4.2'
 gem 'haml', '~> 5.0', '>= 5.0.4'
 gem 'simple_form', github: 'plataformatec/simple_form'
+gem 'normalize-rails'
 
 
 group :development, :test do

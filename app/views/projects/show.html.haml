@@ -1,13 +1,12 @@
-%h1 Show page - individual project pages
+#project_show
+	%h2.title= @project.title
+	%p.content= simple_format(@project.content)
 
 
-%h2= @project.title
-%p= @project.content
+	.buttons
+		- if model_id = current_model
+			= link_to "Edit", edit_project_path(@project), class: "button"
+			= link_to "Delete", project_path(@project), method: :delete, data: {confirm: "Are you sure?"}, class: "button"
+			= link_to "Back", projects_path, class: "button"
 
-
-
-- if model_id = current_model
-	= link_to "Edit", edit_project_path(@project)
-	= link_to "Delete", project_path(@project), method: :delete, date: { confirm: "Are you sure?"}
-	= link_to "Back", projects_path
 

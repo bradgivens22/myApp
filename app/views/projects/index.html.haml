@@ -1,13 +1,16 @@
 %h2 Index page - listing all projects
 
-=link_to "Home", root_path
-- if model_signed_in?
-	=link_to "Add project", new_project_path
--else 
+.buttons
+	=link_to "Home", root_path, class: "button"
+	
+#project_list
+	- if model_signed_in?
+		=link_to "Add project", new_project_path, class: "button"
+	-else 
 
-- @project.each do |project|
-	%a{ href: (url_for [project])}
-		%h3.title= project.title
-		%p.date= project.created_at
+	- @project.each do |project|
+		%a{ href: (url_for [project])}
+			%h3.title= project.title
+			%p.date= project.created_at
 	
 

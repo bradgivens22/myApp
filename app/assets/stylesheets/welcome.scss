@@ -2,32 +2,61 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-.header {
-	background: #E2E1E0;
-	position: fixed;
-	padding: 10;
+.banner {
+	background-image: url(image_path("banner.jpg"));
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+	margin: 0 10px 0 10px;
 	width: 100%;
+	min-height: 350px;
+	display: table;
 
-	.nav {
-		width: auto;
-		height: auto;
-		float: right;
 
-		.buttons {
-			margin-top: 2; 
-			a.button {
-				background: #959796;
-				padding: .5rem 1rem;
-				border-radius: 1rem;
-				text-decoration: none;
-				color: #60FECB;
-				border: 2px solid none;
+	.banner_content {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		h2 {
+			color: white;
+			font-size: 3.5rem;
+			margin: 0;
+		}
+	}
+}
+
+.container {
+	background: #F98383;
+	margin: 10px;
+	padding: 10px;
+	max-width: 100%;
+	max-height: 400px;
+
+	 .header {
+		padding: 10px;
+		margin: 10px;
+		max-width: 100%;
+		height: 30px;
+		.nav {
+			.buttons {
+				margin-bottom: 5px;
+				margin-top: 5px;
+				float: right;
+				a.buttons {
+					background: #959796;
+					padding: .5rem 1rem;
+					border-radius: 1rem;
+					text-decoration: none;
+					color: #60FECB;
+					
+				}
 			}
+
 		}
 
 	}
-
 }
+
+
 
 

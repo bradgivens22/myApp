@@ -1,17 +1,19 @@
-%h2 Index page - listing all projects
+.container 
+	%h2 Index page - listing all projects
 
-.buttons
-	=link_to "Home", root_path, class: "button"
-	
-#project_list
 	.buttons
+		=link_to "Home", root_path, class: "button"
 		- if model_signed_in?
 			=link_to "Add project", new_project_path, class: "button"
-		-else 
-		- @project.each do |project|
+		-else
+
+
+#project_list
+
+	- @project.each do |project|
+		.project
 			%a{ href: (url_for [project])}
 				%h3.title= project.title
 			%p.date= project.created_at
-	
 
- 
+

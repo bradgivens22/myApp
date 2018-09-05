@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :examples
   devise_for :models
 #devise_for :projects
 get 'welcome/index'

@@ -17,6 +17,8 @@ gem 'devise', '~> 4.2'
 gem 'haml', '~> 5.0', '>= 5.0.4'
 gem 'simple_form', github: 'plataformatec/simple_form'
 gem 'normalize-rails'
+gem 'carrierwave', '~> 0.10.0'
+gem 'mini_magick', '~> 4.3'
 
 
 group :development, :test do
